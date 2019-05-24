@@ -221,8 +221,9 @@ a {
     /* set a grid-gap of 1em 
     and make sure to remove the margin on each .lesson
     to get an evenly spaced layout. */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
   }
-
 }
 
 
@@ -247,6 +248,7 @@ a {
   .lessons-grid {
     /* TODO 2 */
     /* 4 column template! (1 fraction each) */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   /* TODO 4 */
@@ -261,6 +263,20 @@ a {
   /* Hint: Don't think about shrinking the last two elements into the single column,
   but instead think about stretching the first two across the template. */
 
+  .main-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "header header"
+      "lessons lessons"
+      "grading topics";
+  }
 
+  .main-header {
+    grid-area: header;
+  }
 
+  .lessons {
+    grid-area: lessons;
+  }
 }
