@@ -146,6 +146,8 @@ a {
   /* Restrict the maximum width of the .main-block to 1200px,
   then ensure that block is centered within the layout */
   /* Hint: how do you center a block element? */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .main-section {
